@@ -16,7 +16,7 @@ const RandomQuote = () => {
   return (
     <div>
       <h1>RandomQuote</h1>
-      <button onClick={handleClick}>다음 명언</button>
+      <button onClick={handleClick}>다음 명언!</button>
       <p>"{quote.text}"</p>
       <p>- {quote.author}</p>
     </div>
