@@ -5,7 +5,11 @@ const RandomQuote = () => {
   const [quote, setQuote] = useState(quotes[0]);
 
   const handleClick = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+
+    while (quotes.length > 1 && quotes[randomIndex].id === quote.id) {
+      randomIndex = Math.floor(Math.random() * quotes.length);
+    }
     setQuote(quotes[randomIndex]);
   };
 
